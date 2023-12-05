@@ -3,7 +3,7 @@
 <h2>Es obligatorio ponerlo en la ruta C:/</h2>
 <br>
 Es una herramienta sencilla para activar diferentes versiones de Windows sin instalar programas y cuando termines de activarla podrás eliminarla esta misma sin problema y permanecerá activa.
-<br>
+<br><br>
 Mini-Instrucciones<br>
 <br>
 1.Seleccionar versión de Windows<br>
