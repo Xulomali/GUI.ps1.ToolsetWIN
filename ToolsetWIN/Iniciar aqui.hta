@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Activar Windows</title>
+    <hta:application id="script" 
+                   applicationname="MyHTA" 
+                   border="thin" 
+                   borderstyle="normal"
+                   caption="yes"
+                   icon=".\icon.ico"
+                   showintaskbar="yes"
+                   singleinstance="yes"
+                   sysmenu="yes"
+                   version="1.0"
+                   windowstate="normal">
+  </hta:application>
+
+<script>
+
+	// Función para cerrar la ventana después de un retraso
+    function cerrarVentana() {
+      setTimeout(function() {
+        window.close();
+      }, 100); // Cerrar después de 1 segundo (puedes ajustar el tiempo según sea necesario)
+    }
+    // Función para reducir la ventana
+    function reducirVentana() {
+      window.resizeTo(350, 200); // Establece el nuevo ancho y alto de la ventana
+    }
+
+    // Cambia el estado de la ventana a "minimize"
+    function minimizarVentana() {
+      document.all.script.windowstate = "minimize";
+    }
+
+
+    // Llama a la función reducirVentana() cuando la página se carga
+    window.onload = function() {
+      reducirVentana();
+    };
+  </script>
+
+    <script language="VBScript" type="text/vbscript">
+        Sub EjecutarPowerShell()
+            On Error Resume Next
+            Dim shell
+            Set shell = CreateObject("WScript.Shell")
+            
+            ' Ruta al script PowerShell
+            Dim rutaScript
+            rutaScript = "C:\ToolsetWIN\script.ps1"
+            
+            ' Construir el comando PowerShell
+            Dim comandoPowerShell
+            comandoPowerShell = "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File """ & rutaScript & """"
+            
+            ' Ejecutar el comando
+            shell.Run comandoPowerShell, 1, True
+            
+            If Err.Number <> 0 Then
+                MsgBox "Error al ejecutar PowerShell: " & Err.Description, vbExclamation, "Error"
+            End If
+        End Sub
+    </script>
+</head>
+<body style="width: 200px; height: 100px;">
+    <h1>Launcher Windows Activator</h1>
+    <button onclick="minimizarVentana();cerrarVentana();EjecutarPowerShell();">Ejecutar Activador</button>
+</body>
+</html>
