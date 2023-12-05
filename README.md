@@ -16,7 +16,7 @@ Mini-Instrucciones<br>
 
 
 It is a simple tool to activate different versions of Windows without installing programs and when you finish activating it you can delete it without problem and it will remain active.
-<br>
+<br><br>
 Mini-Instructions<br>
 <br>
  1.Select Windows version<br>
